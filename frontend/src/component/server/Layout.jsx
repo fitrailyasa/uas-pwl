@@ -20,7 +20,7 @@ const Layout = ({ children }) => {
                                 </div>
                                 <div className="col-sm-6">
                                     <ol className="breadcrumb float-sm-right">
-                                        <li className="breadcrumb-item"><button className="btn btn-link">Admin</button></li>
+                                        <li className="breadcrumb-item">Admin</li>
                                         <li className="breadcrumb-item active">Judul</li>
                                     </ol>
                                 </div>

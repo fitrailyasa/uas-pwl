@@ -9,9 +9,8 @@ function Aside() {
             </a>
 
             <div className="sidebar">
-                <a href="/" className="user-panel mt-3 pb-3 mb-3 d-flex">
+                <a href="/profile" className="user-panel mt-3 pb-3 mb-3 d-flex">
                     <div className="image">
-                        {/* Replace "#" with the actual image source */}
                         <img src="#" className="img-circle elevation-2" alt="User Profile" />
                     </div>
                     <div className="info">
