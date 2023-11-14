@@ -7,7 +7,7 @@ function Kategori() {
     return (
         <>
             <Header />
-            <div className="col-lg-12 mt-5 pt-5 mx-3 form-wrapper">
+            <div className="col-lg-12 mt-5 pt-5 form-wrapper">
                 <TitleHeading text="Kategori" />
             </div >
             <Footer />
