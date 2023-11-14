@@ -22,42 +22,37 @@ import ShowKategori from './pages/server/kategori/Show';
 import IndexTransaksi from './pages/server/transaksi';
 import EditTransaksi from './pages/server/transaksi/Edit';
 import EditProfile from './pages/server/profile/Edit';
-import Header from './component/client/Header';
-import Footer from './component/client/Footer';
+import Layout from './component/server/Layout';
 
 function App() {
   return (
-    <div className="">
+    <Layout>
       <Router>
-        <Header />
-        <div>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/produk" element={<Produk />} />
-            <Route path="/kategori" element={<Kategori />} />
-            <Route path="/detail-produk/1" element={<DetailProduk />} />
-            <Route path="/profile" element={<Profile />} />
-            <Route path="/transaksi" element={<Transaksi />} />
-            <Route path="/admin/user" element={<IndexUser />} />
-            <Route path="/admin/user/create" element={<CreateUser />} />
-            <Route path="/admin/user/edit/1" element={<EditUser />} />
-            <Route path="/admin/user/show/1" element={<ShowUser />} />
-            <Route path="/admin/produk" element={<IndexProduk />} />
-            <Route path="/admin/produk/create" element={<CreateProduk />} />
-            <Route path="/admin/produk/edit/1" element={<EditProduk />} />
-            <Route path="/admin/produk/show/1" element={<ShowProduk />} />
-            <Route path="/admin/kategori" element={<IndexKategori />} />
-            <Route path="/admin/kategori/create" element={<CreateKategori />} />
-            <Route path="/admin/kategori/edit/1" element={<EditKategori />} />
-            <Route path="/admin/kategori/show/1" element={<ShowKategori />} />
-            <Route path="/admin/transaksi" element={<IndexTransaksi />} />
-            <Route path="/admin/transaksi/edit/1" element={<EditTransaksi />} />
-            <Route path="/admin/profile/edit" element={<EditProfile />} />
-          </Routes>
-        </div>
-        <Footer />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/produk" element={<Produk />} />
+          <Route path="/kategori" element={<Kategori />} />
+          <Route path="/detail-produk/1" element={<DetailProduk />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/transaksi" element={<Transaksi />} />
+          <Route path="/admin/user" element={<IndexUser />} />
+          <Route path="/admin/user/create" element={<CreateUser />} />
+          <Route path="/admin/user/edit/1" element={<EditUser />} />
+          <Route path="/admin/user/show/1" element={<ShowUser />} />
+          <Route path="/admin/produk" element={<IndexProduk />} />
+          <Route path="/admin/produk/create" element={<CreateProduk />} />
+          <Route path="/admin/produk/edit/1" element={<EditProduk />} />
+          <Route path="/admin/produk/show/1" element={<ShowProduk />} />
+          <Route path="/admin/kategori" element={<IndexKategori />} />
+          <Route path="/admin/kategori/create" element={<CreateKategori />} />
+          <Route path="/admin/kategori/edit/1" element={<EditKategori />} />
+          <Route path="/admin/kategori/show/1" element={<ShowKategori />} />
+          <Route path="/admin/transaksi" element={<IndexTransaksi />} />
+          <Route path="/admin/transaksi/edit/1" element={<EditTransaksi />} />
+          <Route path="/admin/profile/edit" element={<EditProfile />} />
+        </Routes>
       </Router>
-    </div>
+    </Layout>
   );
 }
 

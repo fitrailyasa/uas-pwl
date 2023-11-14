@@ -1,20 +1,26 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
+import 'admin-lte/plugins/fontawesome-free/css/all.min.css';
+import 'admin-lte/plugins/overlayScrollbars/css/OverlayScrollbars.min.css';
+import 'admin-lte/dist/js/adminlte.min.js';
+import 'admin-lte/dist/css/adminlte.min.css';
+import 'admin-lte/plugins/jquery/jquery.min.js';
+import 'admin-lte/plugins/bootstrap/js/bootstrap.bundle.min.js';
+import 'admin-lte/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js';
 
 library.add(fas);
 
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+ReactDOM.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>
+  </React.StrictMode>,
+  document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function

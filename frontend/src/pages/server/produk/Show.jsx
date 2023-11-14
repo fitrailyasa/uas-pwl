@@ -3,7 +3,7 @@ import TitleHeading from '../../../component/TitleHeading';
 
 function ShowProduk() {
     return (
-        <div class="col-lg-12 form-wrapper">
+        <div className="col-lg-12 form-wrapper">
             <TitleHeading text="Detail Produk" />
         </div>
     );
