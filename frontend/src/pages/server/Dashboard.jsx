@@ -1,6 +1,5 @@
 import React from 'react';
 import Layout from '../../component/server/Layout';
-import TitleHeading from '../../component/TitleHeading';
 
 function Dashboard() {
     return (

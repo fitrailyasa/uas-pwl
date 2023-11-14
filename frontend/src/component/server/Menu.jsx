@@ -19,13 +19,13 @@ function Menu() {
                     </a>
                 </li>
                 <li className="nav-item">
-                    <a href="#" className="nav-link text-white">
+                    <div className="nav-link text-white">
                         <FontAwesomeIcon icon={faUser} className="nav-icon" />
                         <p>
                             Data User
                             <FontAwesomeIcon icon={faAngleLeft} className="right" />
                         </p>
-                    </a>
+                    </div>
                     <ul className="nav nav-treeview">
                         <li className="nav-item">
                             <a href="/admin/user" className="nav-link text-white">
@@ -42,13 +42,13 @@ function Menu() {
                     </ul>
                 </li>
                 <li className="nav-item">
-                    <a href="#" className="nav-link text-white">
+                    <div className="nav-link text-white">
                         <FontAwesomeIcon icon={faBox} className="nav-icon" />
                         <p>
                             Data Produk
                             <FontAwesomeIcon icon={faAngleLeft} className="right" />
                         </p>
-                    </a>
+                    </div>
                     <ul className="nav nav-treeview">
                         <li className="nav-item">
                             <a href="/admin/produk" className="nav-link text-white">
@@ -65,13 +65,13 @@ function Menu() {
                     </ul>
                 </li>
                 <li className="nav-item">
-                    <a href="#" className="nav-link text-white">
+                    <div className="nav-link text-white">
                         <FontAwesomeIcon icon={faTag} className="nav-icon" />
                         <p>
                             Data Kategori
                             <FontAwesomeIcon icon={faAngleLeft} className="right" />
                         </p>
-                    </a>
+                    </div>
                     <ul className="nav nav-treeview">
                         <li className="nav-item">
                             <a href="/admin/kategori" className="nav-link text-white">
@@ -97,10 +97,10 @@ function Menu() {
                     <form id="logout-form" action="#" method="POST" hidden>
                         <input type="hidden" name="_token" value="your_csrf_token_here" />
                     </form>
-                    <a href="#" className="nav-link text-white">
+                    <div className="nav-link text-white">
                         <FontAwesomeIcon icon={faSignOut} className="nav-icon" />
                         <p>Logout</p>
-                    </a>
+                    </div>
                 </li>
             </ul>
         </nav>
