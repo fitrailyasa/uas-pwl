@@ -16,11 +16,16 @@ import 'admin-lte/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js';
 
 library.add(fas);
 
-ReactDOM.render(
+const root = document.getElementById('root');
+
+// Use createRoot to render the app
+const reactRoot = ReactDOM.createRoot(root);
+
+// Render your app using the new createRoot API
+reactRoot.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

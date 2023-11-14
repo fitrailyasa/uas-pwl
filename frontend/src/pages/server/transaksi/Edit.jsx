@@ -1,11 +1,14 @@
 import React from 'react';
 import TitleHeading from '../../../component/TitleHeading';
+import Layout from '../../../component/server/Layout';
 
 function EditTransaksi() {
     return (
-        <div className="col-lg-12 form-wrapper">
-            <TitleHeading text="Edit Transaksi" />
-        </div>
+        <Layout>
+            <div className="col-lg-12 form-wrapper">
+                <TitleHeading text="Edit Transaksi" />
+            </div >
+        </Layout>
     );
 }
 

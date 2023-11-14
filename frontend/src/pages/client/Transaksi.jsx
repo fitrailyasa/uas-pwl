@@ -1,12 +1,18 @@
 import React from 'react';
+import Header from '../../component/client/Header';
+import Footer from '../../component/client/Footer';
 import TitleHeading from '../../component/TitleHeading';
 
-function Kategori() {
+function Transaksi() {
     return (
-        <div className="col-lg-12 form-wrapper">
-            <TitleHeading text="Kategori" />
-        </div>
+        <>
+            <Header />
+            <div className="col-lg-12 form-wrapper">
+                <TitleHeading text="Transaksi" />
+            </div >
+            <Footer />
+        </>
     );
 }
 
-export default Kategori;
+export default Transaksi;

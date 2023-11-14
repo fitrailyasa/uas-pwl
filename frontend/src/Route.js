@@ -6,6 +6,7 @@ import Kategori from './pages/client/Kategori';
 import DetailProduk from './pages/client/DetailProduk';
 import Profile from './pages/client/Profile';
 import Transaksi from './pages/client/Transaksi';
+import Dashboard from './pages/server/Dashboard';
 import IndexUser from './pages/server/user';
 import CreateUser from './pages/server/user/Create';
 import EditUser from './pages/server/user/Edit';
@@ -32,6 +33,7 @@ function Rute() {
                 <Route path="/detail-produk/1" element={<DetailProduk />} />
                 <Route path="/profile" element={<Profile />} />
                 <Route path="/transaksi" element={<Transaksi />} />
+                <Route path="/admin/dashboard" element={<Dashboard />} />
                 <Route path="/admin/user" element={<IndexUser />} />
                 <Route path="/admin/user/create" element={<CreateUser />} />
                 <Route path="/admin/user/edit/1" element={<EditUser />} />

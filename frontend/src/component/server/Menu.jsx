@@ -7,7 +7,7 @@ function Menu() {
         <nav className="mt-2">
             <ul className="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <li className="nav-item">
-                    <a href="/" className="nav-link text-white">
+                    <a href="/admin/dashboard" className="nav-link text-white">
                         <FontAwesomeIcon icon={faTachometerAlt} className="nav-icon" />
                         <p>Dashboard</p>
                     </a>
