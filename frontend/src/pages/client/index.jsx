@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '../../component/client/Layout';
-import Card from '../../component/Card';
+import Card from '../../component/client/CardProduk';
 import logo from '../../assets/logo.png';
 
 function Home() {
