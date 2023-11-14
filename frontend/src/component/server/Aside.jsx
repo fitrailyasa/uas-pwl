@@ -1,5 +1,6 @@
 import React from 'react';
 import Menu from './Menu';
+import Default from '../../assets/profile/default.png';
 
 function Aside() {
     return (
@@ -11,7 +12,7 @@ function Aside() {
             <div className="sidebar">
                 <a href="/profile" className="user-panel mt-3 pb-3 mb-3 d-flex">
                     <div className="image">
-                        <img src="#" className="img-circle elevation-2" alt="User Profile" />
+                        <img src={Default} className="img-circle elevation-2" alt="User Profile" />
                     </div>
                     <div className="info">
                         <p className="d-block text-white">Admin</p>

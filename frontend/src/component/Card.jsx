@@ -1,12 +1,12 @@
 import React from 'react';
 
-function Card({ nama, harga, link }) {
+function Card({ nama, harga, link, gambar }) {
     return (
         <div className="col-xl-2 col-md-6 col-6 mb-3">
             <div className="card text-start rounded-4">
                 <div className="text-center p-2">
                     <img height="100" className=""
-                        src="#"
+                        src={gambar}
                         alt="produk" />
                 </div>
                 <div className="p-3 border-top">

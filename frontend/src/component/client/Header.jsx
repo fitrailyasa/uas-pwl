@@ -1,13 +1,14 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart, faUser } from '@fortawesome/free-solid-svg-icons';
+import logo from '../../assets/logo.png';
 
 function Header() {
     return (
         <header className="px-3 py-2 border-bottom text-white mb-3 fixed-top" style={{ backgroundColor: '#653125' }}>
             <div className="container">
                 <div className="d-flex flex-wrap align-items-center justify-content-between">
-                    <img className="img-fluid" width="60" src="#" alt="Logo" />
+                    <img className="img-fluid" width="60" src={logo} alt="Logo" />
                     <div className="d-none d-lg-block">
                         <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 mx-3 justify-content-center mb-md-0">
                             <li><a href="/" className="nav-link px-3 text-white fw-bold fs-5">Home</a></li>
