@@ -1,5 +1,5 @@
 import React from 'react';
-import TitleHeading from '../../../component/TitleHeading';
+import TitleHeading from '../../../component/server/TitleHeading';
 import Layout from '../../../component/server/Layout';
 
 function CreateProduk() {

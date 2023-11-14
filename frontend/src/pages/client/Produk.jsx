@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '../../component/client/Layout';
-import TitleHeading from '../../component/TitleHeading';
+import TitleHeading from '../../component/client/TitleHeading';
 
 function Produk() {
     return (

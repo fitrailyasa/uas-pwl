@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '../../component/server/Layout';
-import TitleHeading from '../../component/TitleHeading';
+import TitleHeading from '../../component/server/TitleHeading';
 
 function Profile() {
     return (
