@@ -1,16 +1,15 @@
 import React from 'react';
-import Header from '../../component/client/Header';
-import Footer from '../../component/client/Footer';
+import Layout from '../../component/client/Layout';
 import TitleHeading from '../../component/TitleHeading';
 
 function Produk() {
     return (
         <>
-            <Header />
-            <div className="col-lg-12 mt-5 pt-5 form-wrapper">
-                <TitleHeading text="Produk" />
-            </div >
-            <Footer />
+            <Layout>
+                <div className="col-lg-12 mt-5 pt-5 form-wrapper">
+                    <TitleHeading text="Produk" />
+                </div >
+            </Layout>
         </>
     );
 }
