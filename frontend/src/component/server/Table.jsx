@@ -16,20 +16,22 @@ const Table = ({ children, title = [] }) => {
 
     return (
         <div className="col-lg-12 form-wrapper">
-            <div className="card-body">
-                <div className="table-responsive">
-                    <table id="example1" className="table table-bordered table-striped">
-                        <thead>
-                            <tr>
-                                {title.map((title, index) => (
-                                    <th key={index}>{title}</th>
-                                ))}
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {children}
-                        </tbody>
-                    </table>
+            <div className="card">
+                <div className="card-body">
+                    <div className="table-responsive">
+                        <table id="example1" className="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    {title.map((title, index) => (
+                                        <th key={index}>{title}</th>
+                                    ))}
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {children}
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>

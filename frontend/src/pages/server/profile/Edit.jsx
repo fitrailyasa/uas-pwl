@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import Layout from '../../../component/server/Layout';
+import Form from '../../../component/server/Form';
 
 function EditProfile() {
     return (
-        <Layout title="Edit Profile" backlink="/admin/dashboard">
-            <div className="col-lg-12 form-wrapper">
-            </div >
-        </Layout>
+        <>
+            <Layout title="Edit Profile" backlink="/admin/dashboard">
+                <Form>
+                </Form>
+            </Layout>
+        </>
     );
 }
 
