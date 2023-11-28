@@ -21,7 +21,7 @@ const Layout = ({ children, title, backlink }) => {
                                 <div className="col-sm-6">
                                     <ol className="breadcrumb float-sm-right">
                                         <li className="breadcrumb-item">Admin</li>
-                                        <li className="breadcrumb-item active">Judul</li>
+                                        <li className="breadcrumb-item active">{title}</li>
                                     </ol>
                                 </div>
                             </div>
