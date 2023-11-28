@@ -1,12 +1,10 @@
 import React from 'react';
-import TitleHeading from '../../../component/server/TitleHeading';
 import Layout from '../../../component/server/Layout';
 
 function ShowProduk() {
     return (
-        <Layout>
+        <Layout title="Detail Produk" backlink="/admin/produk">
             <div className="col-lg-12 form-wrapper">
-                <TitleHeading text="Detail Produk" />
             </div >
         </Layout>
     );

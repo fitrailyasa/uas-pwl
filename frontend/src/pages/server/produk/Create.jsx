@@ -1,5 +1,4 @@
 import React from 'react';
-import TitleHeading from '../../../component/server/TitleHeading';
 import Layout from '../../../component/server/Layout';
 
 function CreateProduk() {
@@ -15,9 +14,8 @@ function CreateProduk() {
     ];
 
     return (
-        <Layout>
+        <Layout title="Tambah Produk" backlink="/admin/produk">
             <div className="col-lg-12 form-wrapper">
-                <TitleHeading text="Tambah Produk" />
                 <div className="card">
                     <div className="card-body">
                         <form onSubmit={handleSubmit} method="POST" action="#" encType='multipart/form-data'>

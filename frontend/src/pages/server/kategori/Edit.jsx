@@ -1,12 +1,10 @@
 import React from 'react';
-import TitleHeading from '../../../component/server/TitleHeading';
 import Layout from '../../../component/server/Layout';
 
 function EditKategori() {
     return (
-        <Layout>
+        <Layout title="Edit Kategori" backlink="/admin/kategori">
             <div className="col-lg-12 form-wrapper">
-                <TitleHeading text="Edit Kategori" />
             </div >
         </Layout>
     );

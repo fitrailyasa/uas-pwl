@@ -1,12 +1,10 @@
 import React from 'react';
-import TitleHeading from '../../../component/server/TitleHeading';
 import Layout from '../../../component/server/Layout';
 
 function IndexUser() {
     return (
-        <Layout>
+        <Layout title="Tabel User" backlink="/admin/dashboard">
             <div className="col-lg-12 form-wrapper">
-                <TitleHeading text="Kelola User" />
             </div >
         </Layout>
     );

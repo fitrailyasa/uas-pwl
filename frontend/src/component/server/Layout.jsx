@@ -3,7 +3,7 @@ import Navbar from './Navbar';
 import Aside from './Aside';
 import Footer from './Footer';
 
-const Layout = ({ children }) => {
+const Layout = ({ children, title, backlink }) => {
     return (
         <div className="hold-transition sidebar-mini layout-fixed">
             <div className="wrapper">
@@ -15,7 +15,7 @@ const Layout = ({ children }) => {
                             <div className="row mb-2">
                                 <div className="col-sm-6">
                                     <h1 className="ml-2">
-                                        Backlink Judul
+                                        <a className="fas fa-sm fa-arrow-left text-black" href={backlink}></a> {title}
                                     </h1>
                                 </div>
                                 <div className="col-sm-6">

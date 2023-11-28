@@ -1,12 +1,10 @@
 import React from 'react';
-import TitleHeading from '../../../component/server/TitleHeading';
 import Layout from '../../../component/server/Layout';
 
 function ShowUser() {
     return (
-        <Layout>
+        <Layout title="Detail User" backlink="/admin/user">
             <div className="col-lg-12 form-wrapper">
-                <TitleHeading text="Detail User" />
             </div >
         </Layout>
     );
