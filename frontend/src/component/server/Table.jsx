@@ -2,16 +2,11 @@ import React, { useEffect } from 'react';
 import $ from 'jquery';
 
 const Table = ({ children, title, col = [], createLink }) => {
+
     useEffect(() => {
-        $('#example1').DataTable().destroy();
-
-        $("#example1").DataTable({
-            "responsive": true,
-            "lengthChange": true,
-            "autoWidth": true,
-            // "buttons": ["print"]
-        }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-
+        $(document).ready(function () {
+            $('#example1').DataTable();
+        });
     }, []);
 
     return (
