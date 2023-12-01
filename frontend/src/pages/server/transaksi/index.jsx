@@ -1,42 +1,78 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React, { useState } from 'react';
+// import axios from 'axios';
 import Layout from '../../../component/server/Layout';
-import Table from '../../../component/server/Table';
 
 function IndexTransaksi() {
-    const [data, setData] = useState([]);
+    const [searchTerm, setSearchTerm] = useState('');
 
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await axios.get('https://jsonplaceholder.typicode.com/posts');
-                setData(response.data);
-            } catch (error) {
-                console.error('Error fetching data:', error);
-            }
-        };
-
-        fetchData();
-    }, []);
+    const handleSearch = (e) => {
+        setSearchTerm(e.target.value.toUpperCase());
+    };
 
     return (
         <>
             <Layout title="Kelola Transaksi" backlink="/admin/dashboard">
-                <Table title="Transaksi" createLink="" col={[
-                    'No',
-                    'Nama',
-                    'Aksi'
-                ]}>
-                    {data.map((i, item) => (
-                        <tr key={i}>
-                            <td>{i.id}</td>
-                            <td>{i.title}</td>
-                            <td>
-                                <a href="/admin/transaksi/edit/1" className="btn-sm mx-1 btn-warning">Edit</a>
-                            </td>
-                        </tr>
-                    ))}
-                </Table>
+                <div className="">
+                    <div className="">
+                        <section className="row d-flex justify-content-center">
+                            <p className="row justify-content-center">Menampilkan semua riwayat transaksi</p>
+                            <hr className="row w-75" style={{ backgroundColor: 'rgb(48, 48, 48)', color: '#fff', height: '3px' }} />
+                        </section>
+
+                        <section
+                            id="listorders"
+                            className="w-100 d-flex flex-column justify-content-center align-items-center"
+                            style={{ paddingBottom: '15vh' }}
+                        >
+                            <input
+                                className="my-3 w-75 form-control"
+                                type="text"
+                                id="myInput"
+                                value={searchTerm}
+                                onChange={handleSearch}
+                                placeholder="Search..."
+                            />
+                            <div className="card p-2 rounded-3" style={{ backgroundColor: 'rgb(101, 49, 37)', color: 'white', width: '75%' }}>
+                                <div className="d-flex mb-3">
+                                    <div className="d-flex justify-content-center align-content-center">
+                                        <i className="fa-regular fa-file-lines p-1" style={{ fontSize: '2rem' }} />
+                                    </div>
+                                    <div className="d-flex flex-column justify-content-center overflow-hidden">
+                                        <p className="text-md fw-bolder">Pesanan #Fitra</p>
+                                        <div className="d-flex">
+                                            <span className="text-md">10</span>
+                                            <span className="text-md px-2">Ukuran L</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr className="col mt-0 p-0" style={{ backgroundColor: 'white', color: '#3d3c42', height: '3px' }} />
+                                <div className="d-flex px-2 flex-row justify-content-between align-items-center">
+                                    <span>Sedang diproses</span>
+                                    <button className="btn border border-3 text-white">Detail</button>
+                                </div>
+                            </div>
+                            <div className="card p-2 rounded-3" style={{ backgroundColor: 'rgb(101, 49, 37)', color: 'white', width: '75%' }}>
+                                <div className="d-flex mb-3">
+                                    <div className="d-flex justify-content-center align-content-center">
+                                        <i className="fa-regular fa-file-lines p-1" style={{ fontSize: '2rem' }} />
+                                    </div>
+                                    <div className="d-flex flex-column justify-content-center overflow-hidden">
+                                        <p className="text-md fw-bolder">Pesanan #Fitra</p>
+                                        <div className="d-flex">
+                                            <span className="text-md">10</span>
+                                            <span className="text-md px-2">Ukuran L</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr className="col mt-0 p-0" style={{ backgroundColor: 'white', color: '#3d3c42', height: '3px' }} />
+                                <div className="d-flex px-2 flex-row justify-content-between align-items-center">
+                                    <span>Sedang diproses</span>
+                                    <button className="btn border border-3 text-white">Detail</button>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
             </Layout>
         </>
     );

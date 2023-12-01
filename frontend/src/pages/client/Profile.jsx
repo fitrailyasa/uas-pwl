@@ -1,13 +1,13 @@
 import React from 'react';
+// import logo from '../../assets/logo.png';
+import Form from '../../component/server/Form';
 import Layout from '../../component/server/Layout';
 
 function Profile() {
     return (
         <>
-            <Layout>
-                <div className="col-lg-12 form-wrapper">
-
-                </div >
+            <Layout title="Update Profile" backlink="/">
+                <Form></Form>
             </Layout>
         </>
     );

@@ -4,7 +4,7 @@ import Footer from './Footer';
 
 const Layout = ({ children }) => {
     return (
-        <div className="vh-100" style={{ backgroundColor: '#EE4D2D' }}>
+        <div className="d-flex flex-column" style={{ backgroundColor: '#EE4D2D' }}>
             <div className="">
                 <Header />
                 {children}
