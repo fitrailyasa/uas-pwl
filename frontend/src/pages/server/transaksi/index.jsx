@@ -21,8 +21,8 @@ function IndexTransaksi() {
 
     return (
         <>
-            <Layout title="Tabel Transaksi" backlink="/admin/dashboard">
-                <Table title={[
+            <Layout title="Kelola Transaksi" backlink="/admin/dashboard">
+                <Table title="Transaksi" createLink="" col={[
                     'No',
                     'Nama',
                     'Aksi'
@@ -32,12 +32,9 @@ function IndexTransaksi() {
                             <td>{i.id}</td>
                             <td>{i.title}</td>
                             <td>
-                                <a href="#" className="btn-sm mx-1 btn-success">Detail</a>
-                                <a href="#" className="btn-sm mx-1 btn-warning">Edit</a>
-                                <a href="#" className="btn-sm mx-1 btn-danger">Hapus</a>
+                                <a href="/admin/transaksi/edit/1" className="btn-sm mx-1 btn-warning">Edit</a>
                             </td>
                         </tr>
-
                     ))}
                 </Table>
             </Layout>

@@ -15,7 +15,7 @@ const Layout = ({ children, title, backlink }) => {
                             <div className="row mb-2">
                                 <div className="col-sm-6">
                                     <h1 className="ml-2">
-                                        <a className="fas fa-sm fa-arrow-left text-black" href={backlink}></a> {title}
+                                        {backlink && <a className="fas fa-sm fa-arrow-left text-black" href={backlink}></a>} {title}
                                     </h1>
                                 </div>
                                 <div className="col-sm-6">

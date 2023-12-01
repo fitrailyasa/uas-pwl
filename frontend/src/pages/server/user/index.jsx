@@ -21,8 +21,8 @@ function IndexUser() {
 
     return (
         <>
-            <Layout title="Tabel User" backlink="/admin/dashboard">
-                <Table title={[
+            <Layout title="Kelola User" backlink="/admin/dashboard">
+                <Table title="User" createLink="/admin/user/create" col={[
                     'No',
                     'Nama',
                     'Aksi'
@@ -32,12 +32,11 @@ function IndexUser() {
                             <td>{i.id}</td>
                             <td>{i.title}</td>
                             <td>
-                                <a href="#" className="btn-sm mx-1 btn-success">Detail</a>
-                                <a href="#" className="btn-sm mx-1 btn-warning">Edit</a>
-                                <a href="#" className="btn-sm mx-1 btn-danger">Hapus</a>
+                                <a href="/admin/user/show/1" className="btn-sm mx-1 btn-success">Detail</a>
+                                <a href="/admin/user/edit/1" className="btn-sm mx-1 btn-warning">Edit</a>
+                                <a href="/admin/user/destroy/1" className="btn-sm mx-1 btn-danger">Hapus</a>
                             </td>
                         </tr>
-
                     ))}
                 </Table>
             </Layout>

@@ -4,7 +4,7 @@ import Layout from '../../component/server/Layout';
 function Dashboard() {
     return (
         <>
-            <Layout>
+            <Layout title="Dashboard">
                 <div className="col-lg-12 form-wrapper">
                     <div className="row">
                         <div className="col-lg-3 col-6">

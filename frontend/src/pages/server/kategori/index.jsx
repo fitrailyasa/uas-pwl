@@ -21,23 +21,22 @@ function IndexKategori() {
 
     return (
         <>
-            <Layout title="Tabel Kategori" backlink="/admin/dashboard">
-                <Table title={[
+            <Layout title="Kelola Kategori" backlink="/admin/dashboard">
+                <Table title="Kategori" createLink="/admin/kategori/create" col={[
                     'No',
                     'Nama',
                     'Aksi'
                 ]}>
-                    {data.map((i, item) => (
-                        <tr key={i}>
+                    {data.map((i, index) => (
+                        <tr>
                             <td>{i.id}</td>
                             <td>{i.title}</td>
                             <td>
-                                <a href="#" className="btn-sm mx-1 btn-success">Detail</a>
-                                <a href="#" className="btn-sm mx-1 btn-warning">Edit</a>
-                                <a href="#" className="btn-sm mx-1 btn-danger">Hapus</a>
+                                <a href="/admin/kategori/show/1" className="btn-sm mx-1 btn-success">Detail</a>
+                                <a href="/admin/kategori/edit/1" className="btn-sm mx-1 btn-warning">Edit</a>
+                                <a href="/admin/kategori/destroy/1" className="btn-sm mx-1 btn-danger">Hapus</a>
                             </td>
                         </tr>
-
                     ))}
                 </Table>
             </Layout>

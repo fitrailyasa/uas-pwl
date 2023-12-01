@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTachometerAlt, faHome, faUser, faBox, faTag, faHistory, faSignOut, faAngleLeft, faCircle } from '@fortawesome/free-solid-svg-icons';
+import { faTachometerAlt, faHome, faUser, faBox, faTag, faHistory, faSignOut } from '@fortawesome/free-solid-svg-icons';
 
 function Menu() {
     return (
@@ -19,73 +19,22 @@ function Menu() {
                     </a>
                 </li>
                 <li className="nav-item">
-                    <div className="nav-link text-white">
+                    <a href="/admin/user" className="nav-link text-white">
                         <FontAwesomeIcon icon={faUser} className="nav-icon" />
-                        <p>
-                            Data User
-                            <FontAwesomeIcon icon={faAngleLeft} className="right" />
-                        </p>
-                    </div>
-                    <ul className="nav nav-treeview">
-                        <li className="nav-item">
-                            <a href="/admin/user" className="nav-link text-white">
-                                <FontAwesomeIcon icon={faCircle} className="nav-icon" />
-                                <p>Kelola Data User</p>
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            <a href="/admin/user/create" className="nav-link text-white">
-                                <FontAwesomeIcon icon={faCircle} className="nav-icon" />
-                                <p>Tambah Data User</p>
-                            </a>
-                        </li>
-                    </ul>
+                        <p>Data User</p>
+                    </a>
                 </li>
                 <li className="nav-item">
-                    <div className="nav-link text-white">
+                    <a href="/admin/produk" className="nav-link text-white">
                         <FontAwesomeIcon icon={faBox} className="nav-icon" />
-                        <p>
-                            Data Produk
-                            <FontAwesomeIcon icon={faAngleLeft} className="right" />
-                        </p>
-                    </div>
-                    <ul className="nav nav-treeview">
-                        <li className="nav-item">
-                            <a href="/admin/produk" className="nav-link text-white">
-                                <FontAwesomeIcon icon={faCircle} className="nav-icon" />
-                                <p>Kelola Data Produk</p>
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            <a href="/admin/produk/create" className="nav-link text-white">
-                                <FontAwesomeIcon icon={faCircle} className="nav-icon" />
-                                <p>Tambah Data Produk</p>
-                            </a>
-                        </li>
-                    </ul>
+                        <p>Data Produk</p>
+                    </a>
                 </li>
                 <li className="nav-item">
-                    <div className="nav-link text-white">
+                    <a href="/admin/kategori" className="nav-link text-white">
                         <FontAwesomeIcon icon={faTag} className="nav-icon" />
-                        <p>
-                            Data Kategori
-                            <FontAwesomeIcon icon={faAngleLeft} className="right" />
-                        </p>
-                    </div>
-                    <ul className="nav nav-treeview">
-                        <li className="nav-item">
-                            <a href="/admin/kategori" className="nav-link text-white">
-                                <FontAwesomeIcon icon={faCircle} className="nav-icon" />
-                                <p>Kelola Data Kategori</p>
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            <a href="/admin/kategori/create" className="nav-link text-white">
-                                <FontAwesomeIcon icon={faCircle} className="nav-icon" />
-                                <p>Tambah Data Kategori</p>
-                            </a>
-                        </li>
-                    </ul>
+                        <p>Data Kategori</p>
+                    </a>
                 </li>
                 <li className="nav-item">
                     <a href="/admin/transaksi" className="nav-link text-white">
