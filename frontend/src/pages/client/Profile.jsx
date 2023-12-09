@@ -1,7 +1,7 @@
 import React from 'react';
 // import logo from '../../assets/logo.png';
-import Form from '../../component/server/Form';
-import Layout from '../../component/server/Layout';
+import Form from '../../components/server/Form';
+import Layout from '../../components/server/Layout';
 
 function Profile() {
     return (

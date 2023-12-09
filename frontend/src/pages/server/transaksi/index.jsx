@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 // import axios from 'axios';
-import Layout from '../../../component/server/Layout';
+import Layout from '../../../components/server/Layout';
 
 function IndexTransaksi() {
     const [searchTerm, setSearchTerm] = useState('');

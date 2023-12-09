@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from '../../assets/logo.png';
-import Layout from '../../component/client/Layout';
+import Layout from '../../components/client/Layout';
 
 function Produk() {
     return (

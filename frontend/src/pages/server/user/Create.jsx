@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Layout from '../../../component/server/Layout';
-import Form from '../../../component/server/Form';
+import Layout from '../../../components/server/Layout';
+import Form from '../../../components/server/Form';
 
 function CreateUser() {
     const [formData, setFormData] = useState({

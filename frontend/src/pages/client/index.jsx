@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Layout from '../../component/client/Layout';
-import Card from '../../component/client/CardProduk';
+import Layout from '../../components/client/Layout';
+import Card from '../../components/client/CardProduk';
 import logo from '../../assets/logo.png';
 
 function Home() {

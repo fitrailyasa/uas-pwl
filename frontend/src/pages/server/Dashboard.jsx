@@ -1,5 +1,5 @@
 import React from 'react';
-import Layout from '../../component/server/Layout';
+import Layout from '../../components/server/Layout';
 
 function Dashboard() {
     return (
