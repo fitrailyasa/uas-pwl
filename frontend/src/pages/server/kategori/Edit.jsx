@@ -1,47 +1,63 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useParams } from 'react-router-dom';
 import Layout from '../../../components/server/Layout';
 import Form from '../../../components/server/Form';
 
 function EditKategori() {
-    const { id } = useParams();
     const [formData, setFormData] = useState({
-        title: '',
-        body: '',
+        nama: '',
+        gambar: null,
     });
 
+    const [showAlerts, setShowAlerts] = useState(false);
+
     useEffect(() => {
-        const fetchKategori = async () => {
+        const fetchKategoriData = async () => {
             try {
-                const response = await axios.get(`https://jsonplaceholder.typicode.com/posts/${id}`);
-                setFormData(response.data);
+                const response = await axios.get('https://jsonplaceholder.typicode.com/users/1');
+                const kategoriData = response.data;
+
+                setFormData({
+                    nama: kategoriData.name,
+                    gambar: null,
+                });
             } catch (error) {
-                console.error('Error fetching kategori data:', error);
+                console.error('Error fetching kategori data', error);
             }
         };
 
-        fetchKategori();
-    }, [id]);
+        fetchKategoriData();
+    }, []);
 
     const handleChange = (e) => {
-        const { name, value } = e.target;
+        const { name, value, files } = e.target;
 
         setFormData((prevData) => ({
             ...prevData,
-            [name]: value,
+            [name]: name === 'gambar' ? files[0] : value,
         }));
+
+        setShowAlerts(false);
     };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
 
+        if (formData.nama === '' || formData.gambar === null) {
+            setShowAlerts(true);
+            return;
+        }
+
         try {
-            await axios.put(`https://jsonplaceholder.typicode.com/posts/${id}`, formData);
-            // Optionally, redirect the user to the category list or show a success message
+            const formDataToSend = new FormData();
+            formDataToSend.append('nama', formData.nama);
+            formDataToSend.append('gambar', formData.gambar);
+
+            const response = { data: { id: 1, ...formData } };
+
+            console.log('Kategori updated successfully', response.data);
         } catch (error) {
-            console.error('Error updating kategori:', error);
-            // Handle error, show an error message, etc.
+            console.error('Error updating kategori', error);
         }
     };
 
@@ -49,22 +65,23 @@ function EditKategori() {
         <>
             <Layout title="Edit Kategori" backlink="/admin/kategori">
                 <Form onSubmit={handleSubmit}>
+                    {/* Your form inputs */}
                     <div className="row">
                         <div className="col-md-12">
                             <div className="mb-3">
-                                <label className="form-label">Title</label>
+                                <label className="form-label">Nama</label>
                                 <input
                                     type="text"
-                                    className={`form-control ${formData.title === '' ? 'is-invalid' : ''}`}
-                                    placeholder="Title"
-                                    name="title"
-                                    id="title"
-                                    value={formData.title}
+                                    className={`form-control ${showAlerts && formData.nama === '' ? 'is-invalid' : ''}`}
+                                    placeholder="nama"
+                                    name="nama"
+                                    id="nama"
+                                    value={formData.nama}
                                     onChange={handleChange}
                                     required
                                 />
-                                {formData.title === '' && (
-                                    <div className="alert alert-danger">Title is required</div>
+                                {showAlerts && formData.nama === '' && (
+                                    <div className="alert alert-danger">Nama is required</div>
                                 )}
                             </div>
                         </div>
@@ -72,18 +89,18 @@ function EditKategori() {
                     <div className="row">
                         <div className="col-md-12">
                             <div className="mb-3">
-                                <label className="form-label">Body</label>
-                                <textarea
-                                    className={`form-control ${formData.body === '' ? 'is-invalid' : ''}`}
-                                    placeholder="Body"
-                                    name="body"
-                                    id="body"
-                                    value={formData.body}
+                                <label className="form-label">Gambar</label>
+                                <input
+                                    type="file"
+                                    className={`form-control ${showAlerts && formData.gambar === null ? 'is-invalid' : ''}`}
+                                    placeholder="gambar"
+                                    name="gambar"
+                                    id="gambar"
                                     onChange={handleChange}
                                     required
                                 />
-                                {formData.body === '' && (
-                                    <div className="alert alert-danger">Body is required</div>
+                                {showAlerts && formData.gambar === null && (
+                                    <div className="alert alert-danger">Gambar is required</div>
                                 )}
                             </div>
                         </div>
