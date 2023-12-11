@@ -28,7 +28,7 @@ function IndexProduk() {
                     'Aksi'
                 ]}>
                     {data.map((i, item) => (
-                        <tr key={i}>
+                        <tr key={item}>
                             <td>{i.id}</td>
                             <td>{i.title}</td>
                             <td>

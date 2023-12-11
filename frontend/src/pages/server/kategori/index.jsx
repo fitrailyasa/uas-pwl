@@ -27,8 +27,8 @@ function IndexKategori() {
                     'Nama',
                     'Aksi'
                 ]}>
-                    {data.map((i, index) => (
-                        <tr>
+                    {data.map((i, item) => (
+                        <tr key={item}>
                             <td>{i.id}</td>
                             <td>{i.title}</td>
                             <td>
