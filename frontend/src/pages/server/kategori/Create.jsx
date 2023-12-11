@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import Layout from '../../../components/server/Layout';
 import Form from '../../../components/server/Form';
+import { CONFIG } from '../../../config';
 
 function CreateKategori() {
     const [formData, setFormData] = useState({
@@ -22,11 +23,7 @@ function CreateKategori() {
         e.preventDefault();
 
         try {
-            const formDataToSend = new FormData();
-            formDataToSend.append('nama', formData.nama);
-            formDataToSend.append('gambar', formData.gambar);
-
-            const response = await axios.post('https://your-api-endpoint.com/categories', formDataToSend);
+            const response = await axios.post(`${CONFIG.API_URL}/api/kategori/create`, formData);
 
             console.log('Kategori created successfully', response.data);
         } catch (error) {
