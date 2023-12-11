@@ -12,7 +12,7 @@ function ShowKategori() {
     useEffect(() => {
         const fetchKategoriData = async () => {
             try {
-                const response = await axios.get('https://jsonplaceholder.typicode.com/users/1'); // Replace with your API endpoint
+                const response = await axios.get('/api/users/1');
                 const data = response.data;
 
                 setKategoriData({
