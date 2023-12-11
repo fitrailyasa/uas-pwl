@@ -10,6 +10,8 @@ function CreateKategori() {
         gambar: null,
     });
 
+    const [formSubmitted, setFormSubmitted] = useState(false);
+
     const handleChange = (e) => {
         const { name, value, files } = e.target;
 
@@ -22,8 +24,15 @@ function CreateKategori() {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
+        setFormSubmitted(true);
+
+        if (formData.nama === '' || formData.gambar === null) {
+            // If the form data is not valid, don't proceed with the submission
+            return;
+        }
+
         try {
-            const response = await axios.post(`${CONFIG.API_URL}/api/kategori/create`, formData);
+            const response = await axios.post(`${CONFIG.API_URL}/users`, formData);
 
             console.log('Kategori created successfully', response.data);
         } catch (error) {
@@ -41,7 +50,7 @@ function CreateKategori() {
                                 <label className="form-label">Nama</label>
                                 <input
                                     type="text"
-                                    className={`form-control ${formData.nama === '' ? 'is-invalid' : ''}`}
+                                    className={`form-control ${formSubmitted && formData.nama === '' ? 'is-invalid' : ''}`}
                                     placeholder="Nama"
                                     name="nama"
                                     id="nama"
@@ -49,7 +58,7 @@ function CreateKategori() {
                                     onChange={handleChange}
                                     required
                                 />
-                                {formData.nama === '' && (
+                                {formSubmitted && formData.nama === '' && (
                                     <div className="alert alert-danger">Nama is required</div>
                                 )}
                             </div>
@@ -61,14 +70,14 @@ function CreateKategori() {
                                 <label className="form-label">Gambar</label>
                                 <input
                                     type="file"
-                                    className={`form-control ${formData.gambar === null ? 'is-invalid' : ''}`}
+                                    className={`form-control ${formSubmitted && formData.gambar === null ? 'is-invalid' : ''}`}
                                     placeholder="Gambar"
                                     name="gambar"
                                     id="gambar"
                                     onChange={handleChange}
                                     required
                                 />
-                                {formData.gambar === null && (
+                                {formSubmitted && formData.gambar === null && (
                                     <div className="alert alert-danger">Gambar is required</div>
                                 )}
                             </div>

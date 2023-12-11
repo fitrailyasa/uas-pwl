@@ -13,12 +13,12 @@ function ShowKategori() {
     useEffect(() => {
         const fetchKategoriData = async () => {
             try {
-                const response = await axios.get('/api/users/1');
+                const response = await axios.get(`${CONFIG.API_URL}/users/1`);
                 const data = response.data;
 
                 setKategoriData({
                     nama: data.nama || 'test',
-                    gambar: data.gambar || 'img.png',
+                    gambar: data.gambar || 'https://via.placeholder.com/150',
                 });
             } catch (error) {
                 console.error('Error fetching kategori data', error);

@@ -26,7 +26,7 @@ function Menu({ children, title, backlink }) {
                 <MenuItem path="/admin/produk" icon={faBox} label="Data Produk" />
                 <MenuItem path="/admin/kategori" icon={faTag} label="Data Kategori" />
                 <MenuItem path="/admin/transaksi" icon={faHistory} label="Riwayat Transaksi" />
-                {/* Add other menu items as needed */}
+
                 <li className="nav-item">
                     <form id="logout-form" action="#" method="POST" hidden>
                         <input type="hidden" name="_token" value="your_csrf_token_here" />

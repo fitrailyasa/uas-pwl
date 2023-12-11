@@ -15,12 +15,12 @@ function EditKategori() {
     useEffect(() => {
         const fetchKategoriData = async () => {
             try {
-                const response = await axios.get('https://jsonplaceholder.typicode.com/users/1');
+                const response = await axios.get(`${CONFIG.API_URL}/users/1`);
                 const kategoriData = response.data;
 
                 setFormData({
                     nama: kategoriData.name,
-                    gambar: null,
+                    gambar: 'https://via.placeholder.com/150',
                 });
             } catch (error) {
                 console.error('Error fetching kategori data', error);
@@ -66,7 +66,6 @@ function EditKategori() {
         <>
             <Layout title="Edit Kategori" backlink="/admin/kategori">
                 <Form onSubmit={handleSubmit}>
-                    {/* Your form inputs */}
                     <div className="row">
                         <div className="col-md-12">
                             <div className="mb-3">
@@ -90,7 +89,8 @@ function EditKategori() {
                     <div className="row">
                         <div className="col-md-12">
                             <div className="mb-3">
-                                <label className="form-label">Gambar</label>
+                                <label className="form-label">Gambar</label><br />
+                                <img className="img-fluid mb-3" style={{ maxHeight: '200px' }} src={formData.gambar} alt="Gambar Kategori" />
                                 <input
                                     type="file"
                                     className={`form-control ${showAlerts && formData.gambar === null ? 'is-invalid' : ''}`}
