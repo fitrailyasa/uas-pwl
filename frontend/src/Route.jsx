@@ -1,5 +1,5 @@
 import React from "react";
-import { HashRouter as Router, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Home from './pages/client';
 import Produk from './pages/client/order/';
 import DetailProduk from './pages/client/order/Create';
@@ -61,12 +61,10 @@ const ServerRoutes = () => (
 
 function Rute() {
     return (
-        <Router>
-            <Routes>
-                <Route path="/admin/*" element={<ServerRoutes />} />
-                <Route path="/*" element={<ClientRoutes />} />
-            </Routes>
-        </Router>
+        <Routes>
+            <Route path="/admin/*" element={<ServerRoutes />} />
+            <Route path="/*" element={<ClientRoutes />} />
+        </Routes>
     );
 }
 
