@@ -8,6 +8,10 @@ function CreateProduk() {
     const [formData, setFormData] = useState({
         nama: '',
         gambar: null,
+        deskripsi: '',
+        stok: '',
+        harga: '',
+        kategori: '',
     });
 
     const [formSubmitted, setFormSubmitted] = useState(false);
@@ -79,6 +83,80 @@ function CreateProduk() {
                                 />
                                 {formSubmitted && formData.gambar === null && (
                                     <div className="alert alert-danger">Gambar is required</div>
+                                )}
+                            </div>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-md-12">
+                            <div className="mb-3">
+                                <label className="form-label">Deskripsi</label>
+                                <textarea
+                                    className={`form-control ${formSubmitted && formData.deskripsi === '' ? 'is-invalid' : ''}`}
+                                    placeholder="Deskripsi..."
+                                    name="deskripsi"
+                                    id="deskripsi"
+                                    value={formData.deskripsi}
+                                    onChange={handleChange}
+                                    required
+                                ></textarea>
+                                {formSubmitted && formData.deskripsi === '' && (
+                                    <div className="alert alert-danger">Deskripsi is required</div>
+                                )}
+                            </div>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-md-12">
+                            <div className="mb-3">
+                                <label className="form-label">Stok</label>
+                                <input
+                                    type="number"
+                                    className={`form-control ${formSubmitted && formData.stok === '' ? 'is-invalid' : ''}`}
+                                    placeholder="10"
+                                    name="stok"
+                                    id="stok"
+                                    value={formData.stok}
+                                    onChange={handleChange}
+                                    required
+                                />
+                                {formSubmitted && formData.stok === '' && (
+                                    <div className="alert alert-danger">Stok is required</div>
+                                )}
+                            </div>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-md-12">
+                            <div className="mb-3">
+                                <label className="form-label">Harga</label>
+                                <input
+                                    type="number"
+                                    className={`form-control ${formSubmitted && formData.harga === '' ? 'is-invalid' : ''}`}
+                                    placeholder="100000"
+                                    name="harga"
+                                    id="harga"
+                                    value={formData.harga}
+                                    onChange={handleChange}
+                                    required
+                                />
+                                {formSubmitted && formData.harga === '' && (
+                                    <div className="alert alert-danger">Harga is required</div>
+                                )}
+                            </div>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-md-12">
+                            <div className="mb-3">
+                                <label className="form-label">Kategori</label>
+                                <select className="form-select" name="kategori" id="kategori">
+                                    <option value="">Pilih kategori</option>
+                                    <option value="makanan">Makanan</option>
+                                    <option value="minuman">Minuman</option>
+                                </select>
+                                {formSubmitted && formData.kategori === '' && (
+                                    <div className="alert alert-danger">Kategori is required</div>
                                 )}
                             </div>
                         </div>

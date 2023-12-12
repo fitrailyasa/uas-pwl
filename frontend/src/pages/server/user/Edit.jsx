@@ -8,6 +8,10 @@ function EditUser() {
     const [formData, setFormData] = useState({
         nama: '',
         gambar: null,
+        email: '',
+        password: '',
+        role: '',
+        no_telp: '',
     });
 
     const [showAlerts, setShowAlerts] = useState(false);
@@ -21,6 +25,10 @@ function EditUser() {
                 setFormData({
                     nama: userData.name,
                     gambar: 'https://via.placeholder.com/150',
+                    email: userData.email,
+                    password: userData.password,
+                    role: userData.role,
+                    no_telp: userData.no_telp,
                 });
             } catch (error) {
                 console.error('Error fetching user data', error);
@@ -53,6 +61,10 @@ function EditUser() {
             const formDataToSend = new FormData();
             formDataToSend.append('nama', formData.nama);
             formDataToSend.append('gambar', formData.gambar);
+            formDataToSend.append('email', formData.email);
+            formDataToSend.append('password', formData.password);
+            formDataToSend.append('role', formData.role);
+            formDataToSend.append('no_telp', formData.no_telp);
 
             const response = { data: { id: 1, ...formData } };
 
@@ -64,7 +76,7 @@ function EditUser() {
 
     return (
         <>
-            <Layout title="Edit user" backlink="/admin/user">
+            <Layout title="Edit User" backlink="/admin/user">
                 <Form onSubmit={handleSubmit}>
                     <div className="row">
                         <div className="col-md-12">
@@ -73,7 +85,7 @@ function EditUser() {
                                 <input
                                     type="text"
                                     className={`form-control ${showAlerts && formData.nama === '' ? 'is-invalid' : ''}`}
-                                    placeholder="nama"
+                                    placeholder="Nama"
                                     name="nama"
                                     id="nama"
                                     value={formData.nama}
@@ -103,6 +115,76 @@ function EditUser() {
                                 {showAlerts && formData.gambar === null && (
                                     <div className="alert alert-danger">Gambar is required</div>
                                 )}
+                            </div>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-md-12">
+                            <div className="mb-3">
+                                <label className="form-label">Email</label>
+                                <input
+                                    type="email"
+                                    className="form-control"
+                                    placeholder="user@example.com"
+                                    name="email"
+                                    id="email"
+                                    value={formData.email}
+                                    onChange={handleChange}
+                                    required
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-md-12">
+                            <div className="mb-3">
+                                <label className="form-label">Password</label>
+                                <input
+                                    type="password"
+                                    className="form-control"
+                                    placeholder="password"
+                                    name="password"
+                                    id="password"
+                                    value={formData.password}
+                                    onChange={handleChange}
+                                    required
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-md-12">
+                            <div className="mb-3">
+                                <label className="form-label">Role</label>
+                                <select
+                                    className="form-select"
+                                    name="role"
+                                    id="role"
+                                    value={formData.role}
+                                    onChange={handleChange}
+                                    required
+                                >
+                                    <option value="">Pilih role</option>
+                                    <option value="admin">Admin</option>
+                                    <option value="user">User</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-md-12">
+                            <div className="mb-3">
+                                <label className="form-label">No Telp</label>
+                                <input
+                                    type="text"
+                                    className="form-control"
+                                    placeholder="0123456789"
+                                    name="no_telp"
+                                    id="no_telp"
+                                    value={formData.no_telp}
+                                    onChange={handleChange}
+                                    required
+                                />
                             </div>
                         </div>
                     </div>
