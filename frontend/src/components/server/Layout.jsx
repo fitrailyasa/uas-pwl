@@ -9,7 +9,7 @@ const Layout = ({ children, title, backlink }) => {
             <div className="wrapper pt-5">
                 <Navbar />
                 <Aside />
-                <div className="content-wrapper">
+                <div className="content-wrapper pt-3">
                     <div className="content-header">
                         <div className="container-fluid">
                             <div className="row mb-2">

@@ -5,7 +5,7 @@ import { faHome, faBox, faTag, faUser } from '@fortawesome/free-solid-svg-icons'
 function Footer() {
     return (
         <>
-            <footer class="main-footer d-none d-lg-block fixed-bottom">
+            <footer className="main-footer d-none d-lg-block fixed-bottom">
                 <strong>Copyright 2023 || <a href="#">BELANJAIN AJA</a>. </strong>
                 All rights reserved.
             </footer>

@@ -9,7 +9,7 @@ function Produk() {
                 <div className="col-lg-12 form-wrapper">
                     <div className="vh-100 pt-5 mt-5">
                         <section className="px-4 body-section d-flex flex-column gap-3 pt-3" style={{ paddingBottom: '' }}>
-                            <a href="/"
+                            <a href="/detail-produk/1"
                                 className="d-flex align-items-center bg-white rounded-4 px-4 py-2 ">
                                 <div className="d-flex">
                                     <img src={logo} alt="ikon"
@@ -24,7 +24,7 @@ function Produk() {
                             </a>
                         </section>
                         <section className="px-4 body-section d-flex flex-column gap-3 pt-3" style={{ paddingBottom: '' }}>
-                            <a href="/"
+                            <a href="/detail-produk/1"
                                 className="d-flex align-items-center bg-white rounded-4 px-4 py-2 ">
                                 <div className="d-flex">
                                     <img src={logo} alt="ikon"

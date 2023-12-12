@@ -47,7 +47,7 @@ function Transaksi() {
                                     <hr className="col mt-0 p-0" style={{ backgroundColor: 'white', color: '#3d3c42', height: '3px' }} />
                                     <div className="d-flex px-2 flex-row justify-content-between align-items-center">
                                         <span>Sedang diproses</span>
-                                        <button className="btn border border-3 text-white">Detail</button>
+                                        <a href="/detail-transaksi/1" className="btn border border-3 text-white">Detail</a>
                                     </div>
                                 </div>
                                 <div className="card p-2 rounded-3" style={{ backgroundColor: 'rgb(101, 49, 37)', color: 'white', width: '75%' }}>
@@ -66,7 +66,7 @@ function Transaksi() {
                                     <hr className="col mt-0 p-0" style={{ backgroundColor: 'white', color: '#3d3c42', height: '3px' }} />
                                     <div className="d-flex px-2 flex-row justify-content-between align-items-center">
                                         <span>Sedang diproses</span>
-                                        <button className="btn border border-3 text-white">Detail</button>
+                                        <a href="/detail-transaksi/1" className="btn border border-3 text-white">Detail</a>
                                     </div>
                                 </div>
                             </section>
