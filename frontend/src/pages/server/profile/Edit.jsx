@@ -85,7 +85,7 @@ function EditProfile() {
                                 <input
                                     type="text"
                                     className={`form-control ${showAlerts && formData.nama === '' ? 'is-invalid' : ''}`}
-                                    placeholder="nama"
+                                    placeholder="Nama"
                                     name="nama"
                                     id="nama"
                                     value={formData.nama}
@@ -125,7 +125,7 @@ function EditProfile() {
                                 <input
                                     type="email"
                                     className="form-control"
-                                    placeholder="email"
+                                    placeholder="user@example.com"
                                     name="email"
                                     id="email"
                                     value={formData.email}
