@@ -6,7 +6,7 @@ import Footer from './Footer';
 const Layout = ({ children, title, backlink }) => {
     return (
         <div className="hold-transition sidebar-mini layout-fixed">
-            <div className="wrapper">
+            <div className="wrapper pt-5">
                 <Navbar />
                 <Aside />
                 <div className="content-wrapper">
