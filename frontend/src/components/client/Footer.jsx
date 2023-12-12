@@ -10,9 +10,9 @@ function Footer() {
                 <div className="d-flex">
                     <ul className="nav col-12 align-items-center justify-content-between">
                         <li><a href="/" className="nav-link px-2 text-white fw-bold"><FontAwesomeIcon icon={faHome} size="lg" /></a></li>
-                        <li><a href="/" className="nav-link px-2 text-white fw-bold"><FontAwesomeIcon icon={faBox} size="lg" /></a></li>
-                        <li><a href="/" className="nav-link px-2 text-white fw-bold"><FontAwesomeIcon icon={faTag} size="lg" /></a></li>
-                        <li><a href="/" className="nav-link px-2 text-white fw-bold"><FontAwesomeIcon icon={faUser} size="lg" /></a></li>
+                        <li><a href="/produk" className="nav-link px-2 text-white fw-bold"><FontAwesomeIcon icon={faBox} size="lg" /></a></li>
+                        <li><a href="/kategori" className="nav-link px-2 text-white fw-bold"><FontAwesomeIcon icon={faTag} size="lg" /></a></li>
+                        <li><a href="/profile" className="nav-link px-2 text-white fw-bold"><FontAwesomeIcon icon={faUser} size="lg" /></a></li>
                     </ul>
                 </div>
             </div>
