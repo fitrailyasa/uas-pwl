@@ -47,10 +47,11 @@ const Order = () => {
     return (
         <Layout>
             <div className="col-lg-12 form-wrapper">
-                <section className="px-4">
+                <section className="vh-100 pt-5 mt-5">
                     <div className="col-lg-12 form-wrapper">
-                        <div className="p-3 mb-2 text-white">
+                        <div className="px-3 mb-2 text-white">
                             <div className="d-flex justify-content-center m-4">
+                                <img src="https://cdn-icons-png.flaticon.com/512/104/104686.png" alt="" style={{ width: '100px' }} />
                             </div>
                             <div className="mb-2 pb-2 row">
                                 <label htmlFor="nama_produk" className="col-sm-3 col-form-label">Nama Produk:</label>
@@ -108,9 +109,11 @@ const Order = () => {
                                 </div>
                             </div>
                         </div>
-                        <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#modalForm">
-                            Buka Form
-                        </button>
+                        <div className="text-right p-3">
+                            <button type="button" className="btn btn-warning" data-toggle="modal" data-target="#modalForm">
+                                Pesan
+                            </button>
+                        </div>
                     </div>
                     <div className="modal fade" id="modalForm" tabIndex="-1" role="dialog" aria-labelledby="modalFormLabel" aria-hidden="true">
                         <div className="modal-dialog modal-dialog-centered" role="document" style={{ maxWidth: '100%', width: '100%' }}>
@@ -280,8 +283,8 @@ const Order = () => {
                                             </div>
                                         </div>
                                         <div className="pb-5 d-flex justify-content-center align-items-center w-100">
-                                            <button type="submit" className="btn w-25 mt-2" style={{ backgroundColor: '#D6C37E' }}>
-                                                Order
+                                            <button type="submit" className="btn w-25 mt-2 btn-warning">
+                                                Checkout
                                             </button>
                                         </div>
                                     </form>

@@ -32,7 +32,7 @@ function Home() {
                                     gambar={logo}  // Gambar disesuaikan dengan data yang didapat dari API
                                     nama={data.title}  // Nama diambil dari data title dari API
                                     harga={`ID: ${data.id}`}  // Harga atau informasi lain dari data API
-                                    link={`http://localhost:3000/data/${data.id}`}  // Sesuaikan dengan URL yang diinginkan
+                                    link={`/detail-produk/${data.id}`}  // Sesuaikan dengan URL yang diinginkan
                                 />
                             ))}
                         </div>
