@@ -1,11 +1,13 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/client';
-import Produk from './pages/client/Produk';
-import Kategori from './pages/client/Kategori';
-import DetailProduk from './pages/client/DetailProduk';
-import Profile from './pages/client/Profile';
-import Transaksi from './pages/client/Transaksi';
+import Produk from './pages/client/order/';
+import DetailProduk from './pages/client/order/Create';
+import Kategori from './pages/client/kategori';
+import DetailKategori from './pages/client/kategori/Show';
+import Profile from './pages/client/profile/Edit';
+import Transaksi from './pages/client/transaksi';
+import DetailTransaksi from './pages/client/transaksi/Edit';
 import Dashboard from './pages/server/Dashboard';
 import IndexUser from './pages/server/user';
 import CreateUser from './pages/server/user/Create';
@@ -23,37 +25,49 @@ import IndexTransaksi from './pages/server/transaksi';
 import EditTransaksi from './pages/server/transaksi/Edit';
 import EditProfile from './pages/server/profile/Edit';
 
+const ClientRoutes = () => (
+    <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/produk" element={<Produk />} />
+        <Route path="/detail-produk/:id" element={<DetailProduk />} />
+        <Route path="/kategori" element={<Kategori />} />
+        <Route path="/detail-kategori/:id" element={<DetailKategori />} />
+        <Route path="/transaksi" element={<Transaksi />} />
+        <Route path="/detail-transaksi/:id" element={<DetailTransaksi />} />
+        <Route path="/profile" element={<Profile />} />
+    </Routes>
+);
+
+const ServerRoutes = () => (
+    <Routes>
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/user" element={<IndexUser />} />
+        <Route path="/user/create" element={<CreateUser />} />
+        <Route path="/user/edit/:id" element={<EditUser />} />
+        <Route path="/user/show/:id" element={<ShowUser />} />
+        <Route path="/produk" element={<IndexProduk />} />
+        <Route path="/produk/create" element={<CreateProduk />} />
+        <Route path="/produk/edit/:id" element={<EditProduk />} />
+        <Route path="/produk/show/:id" element={<ShowProduk />} />
+        <Route path="/kategori" element={<IndexKategori />} />
+        <Route path="/kategori/create" element={<CreateKategori />} />
+        <Route path="/kategori/edit/:id" element={<EditKategori />} />
+        <Route path="/kategori/show/:id" element={<ShowKategori />} />
+        <Route path="/transaksi" element={<IndexTransaksi />} />
+        <Route path="/transaksi/edit/:id" element={<EditTransaksi />} />
+        <Route path="/profile/edit" element={<EditProfile />} />
+    </Routes>
+);
+
 function Rute() {
     return (
-        <>
-            <Router>
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/produk" element={<Produk />} />
-                    <Route path="/kategori" element={<Kategori />} />
-                    <Route path="/detail-produk/:id" element={<DetailProduk />} />
-                    <Route path="/profile" element={<Profile />} />
-                    <Route path="/transaksi" element={<Transaksi />} />
-                    <Route path="/admin/dashboard" element={<Dashboard />} />
-                    <Route path="/admin/user" element={<IndexUser />} />
-                    <Route path="/admin/user/create" element={<CreateUser />} />
-                    <Route path="/admin/user/edit/:id" element={<EditUser />} />
-                    <Route path="/admin/user/show/:id" element={<ShowUser />} />
-                    <Route path="/admin/produk" element={<IndexProduk />} />
-                    <Route path="/admin/produk/create" element={<CreateProduk />} />
-                    <Route path="/admin/produk/edit/:id" element={<EditProduk />} />
-                    <Route path="/admin/produk/show/:id" element={<ShowProduk />} />
-                    <Route path="/admin/kategori" element={<IndexKategori />} />
-                    <Route path="/admin/kategori/create" element={<CreateKategori />} />
-                    <Route path="/admin/kategori/edit/:id" element={<EditKategori />} />
-                    <Route path="/admin/kategori/show/:id" element={<ShowKategori />} />
-                    <Route path="/admin/transaksi" element={<IndexTransaksi />} />
-                    <Route path="/admin/transaksi/edit/:id" element={<EditTransaksi />} />
-                    <Route path="/admin/profile/edit" element={<EditProfile />} />
-                </Routes>
-            </Router>
-        </>
-    )
+        <Router>
+            <Routes>
+                <Route path="/admin/*" element={<ServerRoutes />} />
+                <Route path="/*" element={<ClientRoutes />} />
+            </Routes>
+        </Router>
+    );
 }
 
 export default Rute;

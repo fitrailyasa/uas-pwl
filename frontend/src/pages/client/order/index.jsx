@@ -1,8 +1,8 @@
 import React from 'react';
-import logo from '../../assets/logo.png';
-import Layout from '../../components/client/Layout';
+import logo from '../../../assets/logo.png';
+import Layout from '../../../components/client/Layout';
 
-function Kategori() {
+function Produk() {
     return (
         <>
             <Layout>
@@ -16,7 +16,7 @@ function Kategori() {
                                         style={{ width: '80px' }} className="p-1 rounded-circle" />
                                 </div>
                                 <div className="col d-flex flex-column justify-content-between">
-                                    <span className="fw-bolder py-1">Nama Kategori</span>
+                                    <span className="fw-bolder py-1">Nama Produk</span>
                                     <div className="font-weight-normal text-black">
                                         <span>Deskripsi</span>
                                     </div>
@@ -31,7 +31,7 @@ function Kategori() {
                                         style={{ width: '80px' }} className="p-1 rounded-circle" />
                                 </div>
                                 <div className="col d-flex flex-column justify-content-between">
-                                    <span className="fw-bolder py-1">Nama Kategori</span>
+                                    <span className="fw-bolder py-1">Nama Produk</span>
                                     <div className="font-weight-normal text-black">
                                         <span>Deskripsi</span>
                                     </div>
@@ -45,4 +45,4 @@ function Kategori() {
     );
 }
 
-export default Kategori;
+export default Produk;

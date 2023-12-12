@@ -1,8 +1,8 @@
 import React from 'react';
-import logo from '../../assets/logo.png';
-import Layout from '../../components/client/Layout';
+import logo from '../../../assets/logo.png';
+import Layout from '../../../components/client/Layout';
 
-function Produk() {
+function DetailKategori() {
     return (
         <>
             <Layout>
@@ -45,4 +45,4 @@ function Produk() {
     );
 }
 
-export default Produk;
+export default DetailKategori;

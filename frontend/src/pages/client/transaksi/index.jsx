@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Layout from '../../components/client/Layout';
+import Layout from '../../../components/client/Layout';
 
 function Transaksi() {
     const [searchTerm, setSearchTerm] = useState('');

@@ -1,6 +1,6 @@
 import React from 'react';
-import Layout from '../../components/client/Layout';
-import TitleHeading from '../../components/client/TitleHeading';
+import Layout from '../../../components/client/Layout';
+import TitleHeading from '../../../components/client/TitleHeading';
 
 function DetailProduk() {
     return (
