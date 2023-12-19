@@ -1,5 +1,6 @@
 import React from "react";
 import { Route, Routes } from 'react-router-dom';
+import Login from './pages/auth/Login';
 import Home from './pages/client';
 import Produk from './pages/client/order/';
 import DetailProduk from './pages/client/order/Create';
@@ -35,6 +36,7 @@ const ClientRoutes = () => (
         <Route path="/transaksi" element={<Transaksi />} />
         <Route path="/detail-transaksi/:id" element={<DetailTransaksi />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/login" element={<Login />} />
     </Routes>
 );
 
