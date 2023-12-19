@@ -1,5 +1,7 @@
 # BELANJAIN AJA
 
+<img src="assets/home.png" width="100%">
+
 Aplikasi "Belanjain Aja" adalah platform belanja online yang menyediakan fitur-fitur unggul dalam pengelolaan pengguna, produk, kategori, transaksi, autentikasi, dan pembaruan profil pengguna. Dengan desain yang ramah pengguna, aplikasi ini memudahkan pengguna untuk menjelajahi dan melakukan transaksi belanja secara efisien.
 
 ## ANGGOTA
