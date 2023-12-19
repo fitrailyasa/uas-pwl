@@ -44,7 +44,7 @@ def detail_order_post(request):
         )
         session.add(detail_order)
         session.flush()
-        return create_response("success", "Berhasil Menambahkan Detail Pesanan", 200)
+        return create_response("success", "Berhasil Menambahkan detail_order", 200)
     except Exception as e:
         return create_response("error", "Internal server error", 500)
 
@@ -98,9 +98,9 @@ def detail_order_put(request):
             # Menyelaraskan perubahan data yang ada dalam sesi dengan data yang ada di database
             session.flush()
             # Respon jika berhasil mengubah data
-            return create_response("success", "Berhasil Mengubah Produk", 200)
+            return create_response("success", "Berhasil Mengubah detail_order", 200)
         else:
-            return create_response("error", "Gagal Mengubah Produk", 400)
+            return create_response("error", "Gagal Mengubah detail_order", 400)
     except Exception as e:
         return create_response("error", "Internal server error", 500)
 
@@ -116,8 +116,8 @@ def detail_order_delete(request):
             detail_order.id == detail_order).first()
         if detail_order is not None:
             session.delete(detail_order)
-            return create_response("success", "Berhasil Menghapus Detail Pesanan", 200)
+            return create_response("success", "Berhasil Menghapus detail_order", 200)
         else:
-            return create_response("error", "Gagal Menghapus Detail Pesanan", 400)
+            return create_response("error", "Gagal Menghapus detail_order", 400)
     except Exception as e:
         return create_response("error", "Internal server error", 500)
