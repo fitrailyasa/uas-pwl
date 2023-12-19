@@ -14,8 +14,8 @@ function Login() {
                         <div className="text-white">
                             <div className=" text-center">
                                 <img src={logo} alt="logo" className="img-fluid" />
-                                <h1 className="text-center">LOGIN</h1>
-                                <form action="/" className="col-12">
+                                <h1 className="text-center">LOGIN ADMIN</h1>
+                                <form action="/admin/dashboard/" className="col-12">
                                     <div className="mb-3">
                                         <label htmlFor="username" className="form-label">Username</label>
                                         <input type="text" className="form-control" id="username" placeholder='email' />

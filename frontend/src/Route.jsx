@@ -1,6 +1,7 @@
 import React from "react";
 import { Route, Routes } from 'react-router-dom';
 import Login from './pages/auth/Login';
+import LoginAdmin from './pages/auth/LoginAdmin';
 import Home from './pages/client';
 import Produk from './pages/client/order/';
 import DetailProduk from './pages/client/order/Create';
@@ -37,6 +38,7 @@ const ClientRoutes = () => (
         <Route path="/detail-transaksi/:id" element={<DetailTransaksi />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/login-admin" element={<LoginAdmin />} />
     </Routes>
 );
 
