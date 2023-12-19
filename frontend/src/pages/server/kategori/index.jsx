@@ -33,9 +33,9 @@ function IndexKategori() {
                             <td>{i.id}</td>
                             <td>{i.title}</td>
                             <td>
-                                <a href="/admin/kategori/show/1" className="btn-sm mx-1 btn-success">Detail</a>
-                                <a href="/admin/kategori/edit/1" className="btn-sm mx-1 btn-warning">Edit</a>
-                                <a href="/admin/kategori/destroy/1" className="btn-sm mx-1 btn-danger">Hapus</a>
+                                <a href={`/admin/kategori/show/${i.id}`} className="btn-sm mx-1 btn-success">Detail</a>
+                                <a href={`/admin/kategori/edit/${i.id}`} className="btn-sm mx-1 btn-warning">Edit</a>
+                                <a href={`/admin/kategori/destroy/${i.id}`} className="btn-sm mx-1 btn-danger">Hapus</a>
                             </td>
                         </tr>
                     ))}

@@ -33,9 +33,9 @@ function IndexUser() {
                             <td>{i.id}</td>
                             <td>{i.title}</td>
                             <td>
-                                <a href="/admin/user/show/1" className="btn-sm mx-1 btn-success">Detail</a>
-                                <a href="/admin/user/edit/1" className="btn-sm mx-1 btn-warning">Edit</a>
-                                <a href="/admin/user/destroy/1" className="btn-sm mx-1 btn-danger">Hapus</a>
+                                <a href={`/admin/user/show/${i.id}`} className="btn-sm mx-1 btn-success">Detail</a>
+                                <a href={`/admin/user/edit/${i.id}`} className="btn-sm mx-1 btn-warning">Edit</a>
+                                <a href={`/admin/user/destroy/${i.id}`} className="btn-sm mx-1 btn-danger">Hapus</a>
                             </td>
                         </tr>
                     ))}

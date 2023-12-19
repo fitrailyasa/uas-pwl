@@ -33,9 +33,9 @@ function IndexProduk() {
                             <td>{i.id}</td>
                             <td>{i.title}</td>
                             <td>
-                                <a href="/admin/produk/show/1" className="btn-sm mx-1 btn-success">Detail</a>
-                                <a href="/admin/produk/edit/1" className="btn-sm mx-1 btn-warning">Edit</a>
-                                <a href="/admin/produk/destroy/1" className="btn-sm mx-1 btn-danger">Hapus</a>
+                                <a href={`/admin/produk/show/${i.id}`} className="btn-sm mx-1 btn-success">Detail</a>
+                                <a href={`/admin/produk/edit/${i.id}`} className="btn-sm mx-1 btn-warning">Edit</a>
+                                <a href={`/admin/produk/destroy/${i.id}`} className="btn-sm mx-1 btn-danger">Hapus</a>
                             </td>
                         </tr>
                     ))}
