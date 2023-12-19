@@ -68,7 +68,7 @@ function IndexTransaksi() {
                                 <hr className="col mt-0 p-0" style={{ backgroundColor: 'white', color: '#3d3c42', height: '3px' }} />
                                 <div className="d-flex px-2 flex-row justify-content-between align-items-center">
                                     <span>Sedang diproses</span>
-                                    <a href={`/admin/transaksi/show/${i.id}`} className="btn-sm mx-1 btn-success">Detail</a>
+                                    <a href="/admin/transaksi/edit/1" className="btn border border-3 text-white">Detail</a>
                                 </div>
                             </div>
                         </section>

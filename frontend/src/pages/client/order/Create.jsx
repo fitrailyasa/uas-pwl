@@ -4,20 +4,20 @@ import axios from 'axios';
 
 const Order = () => {
     const [order, setOrder] = useState({
-        nama_produk: '',
-        deskripsi_produk: '',
-        stok_produk: '',
-        harga_produk: '',
-        user_order: '',
-        no_telp: '',
-        nama_order: '',
-        harga_order: '',
-        jumlah_order: '',
-        alamat_order: '',
-        catatan: '',
+        nama_produk: 'test',
+        deskripsi_produk: 'test',
+        stok_produk: '10',
+        harga_produk: '10000',
+        user_order: 'test',
+        no_telp: '097128362486',
+        nama_order: 'test',
+        harga_order: '100000',
+        jumlah_order: 'test',
+        alamat_order: 'test',
+        catatan: 'test',
         pembayaran: 'tunai',
         opsi_pengiriman: 'kunjungi toko',
-        no_rekening: '',
+        no_rekening: 'test',
         foto_pembayaran: null,
     });
 
@@ -283,9 +283,9 @@ const Order = () => {
                                             </div>
                                         </div>
                                         <div className="pb-5 d-flex justify-content-center align-items-center w-100">
-                                            <button type="submit" className="btn w-25 mt-2 btn-warning">
+                                            <a href="/transaksi" className="btn w-25 mt-2 btn-warning">
                                                 Checkout
-                                            </button>
+                                            </a>
                                         </div>
                                     </form>
                                 </div>
