@@ -30,9 +30,6 @@ Sistem keamanan login yang kuat untuk melindungi akun pengguna Belanjain Aja.
 - Update Profile User Belanjain Aja:
 Kemudahan pengguna dalam memperbarui informasi profil pengguna Belanjain Aja.
 
-## ARSITEKTUR
-<img src="assets/arsitektur.jpg" width="100%">
-
 Arsitektur tersebut berbasisi microservice dengan memecah layanan website e-commerce menjadi 5 layanan yaitu login dan register, profile, produk, kategori, serta transaksi. Terdapat API gateway yang berfungsi mengarahkan permintaan pengguna ke layanan yang sesuai. Proses komunikasi pelayanan dilakukan dengan gRPC dengan gRPC client mengirimkan permintaan ke gRPC server yang relevan.
 
 
